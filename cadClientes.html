@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Cadastro Clientes</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">CADASTRAR CLIENTES</h2>
+
+    <div class="container"
+        style="text-align: center; font-size: 150%; margin-top: 1%; margin-left: 22%; background-color: rgb(221, 219, 219); width: 55%;">
+        <form action="http://localhost:3000/clientes" method="POST">
+            <div class="row">
+                <div class="col-3" style="margin-left: 4%;">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="txtNome"><br>
+                    <label for="cor">CPF:</label>
+                    <input type="text" name="txtCpf"><br>
+                    <label for="placa">Telefone:</label>
+                    <input type="text" name="txtTelefone"><br>
+
+                </div>
+                <div class="col-3" style="margin-left: 27%;">
+                    <label for="ano">Endereço:</label>
+                    <input type="text" name="txtEndereco"><br>
+                    <label for="valorC">RG:</label>
+                    <input type="text" name="txtRg">
+                    <button type="submit" style="font-size: smaller; margin-top: 10%; margin: 25%;">Cadastrar</button>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-lg"
+                    style="font-size: smaller; margin: 5%; width: 50%; margin-left: 20%;">Cadastrar</button>
+            </div>
+
+    </div>
+    <a href="clientes.html" style="font-size: 150%; margin-left: 47%; color: black;">Voltar</a>
+
+</body>
+
+</html>

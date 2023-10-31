@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Clientes</title>
+</head>
+
+<body>
+
+    <h2 style="text-align: center;">CLIENTES CADASTRADOS</h2>
+
+    <table class="table table-sm" style="width: 90%; margin-left: 5%;">
+        <thead>
+            <tr>
+                <th>Cod</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>CPF</th>
+                <th>RG</th>
+                <th>Telefone</th>
+
+            </tr>
+        </thead>
+        <tbody id="tabela-clientes"></tbody>
+
+    </table>
+    <div class="container">
+        <div class="row">
+            <a href="cadClientes.html" class="col-6"><button
+                    style="font-size: 100%; margin-left: 39%; border-radius: 25px; text-align: center; width: 300px">CADASTRAR
+                    CLIENTES</button></a>
+            <a href="menu.html" class="col-6"><button
+                    style="font-size: 100%; margin-left: 39%; border-radius: 25px; text-align: center; width: 200px">VOLTAR</button></a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function carregarClientes() {
+            axios.get('http://localhost:3000/clientes')
+                .then(function (response) {
+                    const tabelaClientes = document.getElementById('tabela-clientes');
+                    tabelaClientes.innerHTML = '';
+
+                    response.data.forEach(function (clientes) {
+                        const newRow = tabelaClientes.insertRow();
+                        newRow.innerHTML = `
+                        <td>${clientes.id}</td>
+                        <td>${clientes.txtNome}</td>
+                        <td>${clientes.txtEndereco}</td>
+                        <td>${clientes.txtCpf}</td>
+                        <td>${clientes.txtRg}</td>
+                        <td>${clientes.txtTelefone}</td>
+
+                    `;
+                    });
+                })
+                .catch(function (error) {
+                    console.error('Erro ao carregar dados:', error);
+                });
+        }
+        window.addEventListener('load', carregarClientes);
+    </script>
+</body>
+
+</html>
