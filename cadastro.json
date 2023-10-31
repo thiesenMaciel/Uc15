@@ -1,0 +1,31 @@
+{
+  "motos": [
+    {
+      "txtModelo": "",
+      "txtAno": "",
+      "txtCor": "",
+      "txtValorCompra": "",
+      "txtPlaca": "",
+      "txtValorVenda": "",
+      "id": 0
+    }
+  ],
+  "clientes": [
+    {
+      "txtNome": "",
+      "txtCpf": "",
+      "txtTelefone": "",
+      "txtEndereco": "",
+      "txtRg": "",
+      "id": 0
+    },
+    {
+      "txtNome": "hff",
+      "txtCpf": "xx",
+      "txtTelefone": "xx",
+      "txtEndereco": "xx",
+      "txtRg": "xx",
+      "id": 1
+    }
+  ]
+}

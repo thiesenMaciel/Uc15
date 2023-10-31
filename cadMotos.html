@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Cadastro Motos</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">CADASTRAR MOTOS</h2>
+
+    <div class="container"
+        style="text-align: center; font-size: 150%; margin-top: 1%; margin-left: 15%; background-color: rgb(221, 219, 219); width: 70%;">
+        <form action="http://localhost:3000/motos" method="POST">
+            <div class="row">
+                <div class="col-3" style="margin-left: 4%;">
+                    <label for="modelo">Marca/Modelo:</label>
+                    <input type="text" name="txtModelo" required name="Modelo"><br>
+                    <label for="cor">Cor:</label>
+                    <input type="text" name="txtCor" required name="Cor"><br>
+                    <label for="placa">Placa:</label>
+                    <input type="text" name="txtPlaca" required name="placa"><br>
+                </div>
+                <div class="col-3" style="margin-left: 27%;">
+                    <label for="ano">Ano Modelo:</label>
+                    <input type="text" name="txtAno" required name="ano"><br>
+                    <label for="valorC">Valor Compra:</label>
+                    <input type="text" name="txtValorCompra" required name="valorCompra">
+                    <label for="valorV">Valor Venda:</label>
+                    <input type="text" name="txtValorVenda" required name="valorVenda"> 
+
+                </div>
+                <button type="submit" class="btn btn-secondary btn-lg"
+                    style="font-size: smaller; margin: 5%; width: 50%; margin-left: 20%;">Cadastrar</button>
+
+            </div>
+    </div>
+<a href="motos.html" style="font-size: 150%; margin-left: 47%; color: black;">Voltar</a>
+</body>
+
+</html>
