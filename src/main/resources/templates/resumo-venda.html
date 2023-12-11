@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resumo de Venda</title>
+
+        <!-- Inclua a folha de estilo do Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="container mt-5">
+            <h2>Resumo de Venda</h2>
+
+            <!-- Informações da Venda -->
+            <div class="card">
+                <div class="card-header">
+                    Detalhes da Venda
+                </div>
+                <div class="card-body">
+                    <p>ID da Venda: <span th:text="${venda.id}"></span></p>
+                    <p>Moto: <span th:text="${venda.moto.modelo}"></span></p>
+                    <p>Placa: <span th:text="${venda.moto.placa}"></span></p>
+                    <p>Cliente: <span th:text="${venda.cliente.nome}"></span></p>
+                    <p>Data da Venda: <span th:text="${venda.dataVenda}"></span></p>
+                    <p>Valor: <span th:text="${venda.valor}"></span></p>
+                </div>
+            </div>
+
+            <!-- Outras informações ou ações relacionadas à venda -->
+
+        </div>
+        <header th:insert="~{navbar.html :: nav}"></header>
+        <!-- Inclua os scripts do Bootstrap no final do corpo para otimizar o carregamento -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
